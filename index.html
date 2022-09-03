@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="card">
+        <div class="card-header text-primary">
+            NHẬP NGÀY THÁNG NĂM
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Ngày</label>
+                <input type="number" class="form-control col-sm-2" name="" id="day" aria-describedby="helpId"
+                    placeholder="">
+                <label for="">Tháng</label>
+                <input type="number" class="form-control col-sm-2" name="" id="month" aria-describedby="helpId"
+                    placeholder="">
+                <label for="">Năm</label>
+                <input type="number" class="form-control col-sm-2" name="" id="year" aria-describedby="helpId"
+                    placeholder="">
+            </div>
+            <button class="btn btn-success" onclick="Tomorrow()">Ngày tiếp theo</button>
+            <button class="btn btn-info" onclick="Yesterday()">Ngày trước đó</button>
+        </div>
+        <div id="date" class="card-footer text-danger"></div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header text-primary">
+            BAO NHIÊU NGÀY TRONG THÁNG
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Tháng</label>
+                <input type="number" class="form-control col-sm-2" name="" id="Thang" aria-describedby="helpId"
+                    placeholder="">
+                <label for="">Năm</label>
+                <input type="number" class="form-control col-sm-2" name="" id="Nam" aria-describedby="helpId"
+                    placeholder="">
+            </div>
+            <button class="btn btn-success" onclick="soNgay()">Submit</button>
+        </div>
+        <div id="ngay" class="card-footer text-danger"></div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header text-primary">
+            CÁCH ĐỌC SỐ CÓ 3 CHỮ SỐ
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <label for="">Nhập số N có 3 chữ số</label>
+                <input type="number" class="form-control col-sm-2" name="" id="numN" aria-describedby="helpId"
+                    placeholder="">
+            </div>
+            <button class="btn btn-success" onclick="cachDoc()">Submit</button>
+        </div>
+        <div id="soDoc" class="card-footer text-danger"></div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="card-header text-primary">
+            TÌM SINH VIÊN XA TRƯỜNG NHẤT
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <div class="row">
+                    <label for="" class="col-sm-2">SINH VIÊN THỨ NHẤT</label>
+                    <input type="text" class="form-control col-sm-2 " name="" id="SV1" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ x</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="x1" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ y</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="y1" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+                <div class="row">
+                    <label for="" class="col-sm-2">SINH VIÊN THỨ HAI</label>
+                    <input type="text" class="form-control col-sm-2" name="" id="SV2" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ x</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="x2" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ y</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="y2" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+                <div class="row">
+                    <label for="" class="col-sm-2">SINH VIÊN THỨ BA</label>
+                    <input type="text" class="form-control col-sm-2" name="" id="SV3" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ x</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="x3" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ y</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="y3" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+                <div class="row">
+                    <label for="" class="col-sm-4">NHÀ TRƯỜNG</label>
+                    <label for="">Tọa độ x</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="x4" aria-describedby="helpId"
+                        placeholder="">
+                    <label for="">Tọa độ y</label>
+                    <input type="number" class="form-control col-sm-1" name="" id="y4" aria-describedby="helpId"
+                        placeholder="">
+                </div>
+            </div>
+            <button class="btn btn-success" onclick="khoangCach()">Submit</button>
+        </div>
+        <div id="xaNhat" class="card-footer text-danger"></div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./baitap.js"></script>
+</body>
+
+</html>
